@@ -1,8 +1,12 @@
+import Link from 'next/link';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 export default function Contact() {
-    return (
+    return (    
         <div>
-            <h1>Contact</h1>
-            <p>This is the contact page</p>
+            <h2> This is the contact page</h2>
+           <div><Navbar/></div>
+           <Footer/>
         </div>
     );
 }
