@@ -1,17 +1,32 @@
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Link from 'next/link';
+import Card from '@/components/card';
 
 
 export default function Home() {
   return (
     <div>
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h2> Welcome to my new Page this is the Home page</h2>
-        <Navbar/>
-        
-      </main>
-         <Footer/>
-    </div>
+    <Navbar />
+    <h1>Welcome to My Next.js Site</h1>
+
+    <Card 
+      title="Learn Next.js"
+      description="Next.js is a powerful framework built on top of React."
+    />
+
+    <Card 
+      title="Why Next.js?"
+      description="It offers server-side rendering, static generation, and more!"
+    />
+
+    <Card 
+      title="Get Started"
+      description="Create your first app using create-next-app!"
+    />
+
+    <Footer />
+  </div>
+
   );
 }
