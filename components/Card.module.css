@@ -1,0 +1,20 @@
+/* components/Card.module.css */
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .cardTitle {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .cardDescription {
+    font-size: 16px;
+    color: #666;
+  }
+  
