@@ -1,5 +1,6 @@
 import posts from '@/data/posts';
 import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 // import posts from data/posts.js ;
 
 export async function getStaticProps() {
@@ -29,6 +30,7 @@ export default function Posts({ posts }) {
         </div>
       ))}
     </div>
+     <Footer/> 
     </div>
   );
 }
