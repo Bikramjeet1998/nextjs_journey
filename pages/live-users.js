@@ -1,5 +1,4 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Layout from "@/components/Layout";
 
 
 
@@ -15,7 +14,7 @@ export async function getServerSideProps() {
   export default function LivePosts({ posts }) {
     return (
          <div>
-            <div><Navbar/></div>
+            <Layout>
             <div style={{ padding: '2rem' }}>
       <h1>Live Users (Fetched from Server)</h1>
       {posts.map(user => (
@@ -33,7 +32,7 @@ export async function getServerSideProps() {
       ))}
     </div>
       
-       <Footer/> 
+       </Layout>
       </div>
     );
   }

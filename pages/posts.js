@@ -1,6 +1,5 @@
 import posts from '@/data/posts';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
+import Layout from '@/components/Layout'; 
 // import posts from data/posts.js ;
 
 export async function getStaticProps() {
@@ -14,7 +13,9 @@ export async function getStaticProps() {
 export default function Posts({ posts }) {
   return (
     <div>
-    <div><Navbar/></div>
+      <Layout >
+    
+      
     <div style={{ padding: '5rem' }}>
       
       <h1>Blog Posts</h1>
@@ -30,7 +31,7 @@ export default function Posts({ posts }) {
         </div>
       ))}
     </div>
-     <Footer/> 
+    </Layout>
     </div>
   );
 }
