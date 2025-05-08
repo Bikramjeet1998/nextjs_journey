@@ -26,7 +26,7 @@ export default function Navbar() {
         <li><Link className={styles.link} href="/">Home</Link></li>
         <li><Link className={styles.link} href="/about">About</Link></li>
         <li><Link className={styles.link} href="/posts">Posts</Link></li>
-        <li><Link className={styles.link} href="/live-users">Live-Posts</Link></li>
+        <li><Link className={styles.link} href="/live-users">Live-Users</Link></li>
         <li><Link className={styles.link} href="/products">My Products</Link></li>
         <li><Link className={styles.link} href="/contact">Contact</Link></li>
       </ul>
