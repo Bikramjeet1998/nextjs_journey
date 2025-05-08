@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+
 import styles from '@/styles/MyProducts.module.css';
+import Layout from "@/components/Layout";
 
 
 export async function getServerSideProps() {
@@ -14,9 +14,7 @@ export async function getServerSideProps() {
 
   export default function Products({ products }) {
     return (
-         <div>
-            <div><Navbar/></div>
-            
+         <div>            
             <div style={{ padding: '2rem' }}>
       <h1 style={{ marginBottom: '2rem' }}>My Products</h1>
       <div style={{
@@ -33,8 +31,6 @@ export async function getServerSideProps() {
         ))}
       </div>
     </div>
-       
-       <Footer/> 
       </div>
     );
   }

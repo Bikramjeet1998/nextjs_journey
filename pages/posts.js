@@ -13,9 +13,7 @@ export async function getStaticProps() {
 export default function Posts({ posts }) {
   return (
     <div>
-      <Layout >
-    
-      
+ 
     <div style={{ padding: '5rem' }}>
       
       <h1>Blog Posts</h1>
@@ -31,7 +29,7 @@ export default function Posts({ posts }) {
         </div>
       ))}
     </div>
-    </Layout>
+   
     </div>
   );
 }

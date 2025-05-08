@@ -14,7 +14,7 @@ export async function getServerSideProps() {
   export default function LivePosts({ posts }) {
     return (
          <div>
-            <Layout>
+           
             <div style={{ padding: '2rem' }}>
       <h1>Live Users (Fetched from Server)</h1>
       {posts.map(user => (
@@ -32,7 +32,7 @@ export async function getServerSideProps() {
       ))}
     </div>
       
-       </Layout>
+     
       </div>
     );
   }
