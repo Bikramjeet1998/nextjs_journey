@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
         
-      <h1 className="text-4xl font-bold text-blue-600">Tailwind via CDN is working!</h1>
+    
     
         <h1 style={{ marginBottom: '2rem' }}>Welcome to My Next.js Site</h1>
         <p>This is a simple example of a Next.js application.</p>

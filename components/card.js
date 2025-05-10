@@ -1,5 +1,5 @@
 // components/Card.js
-import styles from './Card.module.css'
+import styles from '@/styles/Card.module.css';
 
 export default function Card({ title, description }) {
   return (
