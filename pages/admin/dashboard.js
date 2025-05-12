@@ -1,34 +1,26 @@
-import AdminLayout from '@/components/AdminLayout';
+// pages/admin/dashboard.js
+import { parse } from 'cookie';
 
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/users');
-  const users = await res.json();
+export async function getServerSideProps(context) {
+  const cookies = parse(context.req.headers.cookie || '');
 
-  return {
-    props: { users },
-  };
+  if (cookies.admin_token !== 'secure123') {
+    return {
+      redirect: {
+        destination: '/adminlogin',
+        permanent: false,
+      },
+    };
+  }
+
+  return { props: {} };
 }
 
-export default function Dashboard({ users }) {
+export default function Dashboard() {
   return (
-    <AdminLayout>
-      <div style={{ padding: '2rem' }}>
-        <h1 style={{ fontSize: '24px', marginBottom: '1rem' }}>All Registered Users</h1>
-
-        {users.map(user => (
-          <div key={user.id} style={{
-            border: '1px solid #ccc',
-            padding: '1rem',
-            borderRadius: '10px',
-            marginBottom: '1rem',
-            backgroundColor: '#f9f9f9'
-          }}>
-            <h2>{user.name}</h2>
-            <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>Website:</strong> <a href={`https://${user.website}`} target="_blank" rel="noreferrer">{user.website}</a></p>
-          </div>
-        ))}
-      </div>
-    </AdminLayout>
+    <div style={{ padding: '2rem' }}>
+      <h1>Welcome to Admin Dashboard</h1>
+      <p>You are now logged in.</p>
+    </div>
   );
 }
